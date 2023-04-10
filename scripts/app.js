@@ -104,7 +104,7 @@
 
 
 
-// ............task 2 (BANOQABIL CLI)............
+// ............task 1 (BANOQABIL CLI)............
 // let ZakatPercentage=0.025;
 // let UserInput=prompt("Enter Your amount on which you want to calculate Zakat") ;
 // let Result=ZakatPercentage * Number(UserInput);
@@ -271,9 +271,58 @@
 // console.log(finalString);
 
 
+//.....................BANOQABIL TASK 2...............DATE:10-APRIL-2023
 
 
+//Q1)WRITE A TABLE OF THE NUMBER THAT THE USER ENTERED.
+let number=( prompt("Enter the number whose table you want to display"))
+console.log("Table of "+ number)
+for(var i=1;i<=10;i++){
+    console.log(number + "*" + i + "=" + (parseInt(number)*i))
+}
 
+//Q2)WRITE A CODE TO PRINT FIBONACCI SERIES.
+const num=parseInt (prompt("Enter the number of terms"))//takes input from user
+let n1=0,n2=1,NextTerm;
+console.log("Fibonacci Series")
+for(var i=1;i<=num;i++){
+    console.log(n1);
+    NextTerm=n1+n2;
+    n1=n2;
+    n2=NextTerm;
+}
+//Q3)TASK OF NAME
+let UserName=prompt("Enter Your Name");
+UserName=UserName.toLowerCase()
+UserName=UserName.replace(UserName.charAt(0),UserName.charAt(0).toUpperCase())
+console.log(UserName)
 
+//Q4 MATCH THE CAPITAL AND THE CITIES:
 
+let cities=['Karachi','Islamabad','faisalabad','lahore']
+let capital=['Karachi','Islamabad']
+for(var i=0;i<=cities.length;i++){
+    if(cities[i]==capital[i]){
+     alert(capital +" was the capital "+" from the given cities")
+     }
+}
 
+//Q5 CALCULATE FITRA
+//Instructions: Ask the user the number  of family members they have and the form in which they want to give the fitra then calculate the fitra:
+let FamilyMembers=parseInt(prompt("Enter the number of family members you have?"))
+let FitraForm=prompt("Enter the form in which you want to give the fitra:Press 1 for Wheat,2 for Raisin,3 for oats,4 for Dates")
+if(FitraForm=='1'){
+    console.log("Your Fitra amount to be payed is ",90*FamilyMembers)
+}
+else if(FitraForm=='2'){
+    console.log("Your Fitra amount to be payed is ",1600*FamilyMembers)
+}
+else if(FitraForm=='3'){
+    console.log("Your Fitra amount to be payed is ",240*FamilyMembers)
+}
+ else if(FitraForm=='4'){
+    console.log("Your Fitra amount to be payed is ",840*FamilyMembers)
+}
+else{
+    console.log("Invalid Options Entered")
+}
