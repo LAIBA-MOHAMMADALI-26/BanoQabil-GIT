@@ -6,7 +6,7 @@ alert("Your Zakat is " + Result)
 
 //..............................Task 2:CALCULATE FITRA.....................................
 //Instructions: Ask the user the number  of family members they have and the form in which they want to give the fitra then calculate the fitra:
-let FamilyMembers=parseInt(prompt("Enter the number of family members you have?"))
+let FamilyMembers=Number(prompt("Enter the number of family members you have?"))
 let FitraForm=prompt("Enter the form in which you want to give the fitra:Press 1 for Wheat,2 for Raisin,3 for oats,4 for Dates")
 if(FitraForm=='1'){
     console.log("Your Fitra amount to be payed is ",90*FamilyMembers)
@@ -25,7 +25,8 @@ else{
 }
 
 //................Task 3..............
-var secretNumber = Math.floor(Math.random() * 10) + 1;
+var secretNumber=5;
+// var secretNumber = Math.floor(Math.random() * 10) + 1;
 var guess = prompt("Guess the secret number between 1 and 10");
 if (guess == secretNumber) {
   alert("Congratulations! You guessed the secret number");
@@ -38,15 +39,20 @@ if (guess == secretNumber) {
 //..................Task 4: ............
 let Name=prompt("Enter Your Name");
 Name=Name.toLowerCase()
-Name=Name.replace(Name.charAt(0),Name.charAt(0).toUpperCase())
-console.log(Name)
+
+let FirstLetter=Name.slice(0,1);
+FirstLetter=FirstLetter.toUpperCase();
+let FinalName=FirstLetter + Name.slice(1,Name.length)
+console.log(FinalName)
+// Name=Name.replace(Name.charAt(0),Name.charAt(0).toUpperCase())
+
 
 //...................Task 5.................
 
 var contactNumbers = [];
 var contactNames = [];
 
-var numContacts = parseInt(prompt("How many contacts do you want to add?"));
+var numContacts = Number(prompt("How many contacts do you want to add?"));
 for (var i = 0; i < numContacts; i++) {
   var number = prompt("Enter the contact number:");
   var UserName = prompt("Enter the contact name:");
@@ -65,7 +71,7 @@ for (var i = 0; i < contactNumbers.length; i++) {
 var products = ["apple", "banana", "orange", "grape", "watermelon"];
 
 // Prompt the user to enter the position of the product they want to remove
-var position = parseInt(prompt("Enter the position of the product you want to remove (1-" + products.length + "):"));
+var position = Number(prompt("Enter the position of the product you want to remove (1-" + products.length + "):"));
 
 // Remove the product at the specified position and store it in a variable
 var removedItem = products.splice(position - 1, 1);
@@ -81,7 +87,7 @@ console.log("Total number of items remaining: " + products.length);
 
 
 let Nationality = prompt('Enter Your Nationality?')
-let Age = parseInt(prompt('Enter Your Age?'))
+let Age = Number(prompt('Enter Your Age?'))
 let Gender = prompt('Enter Your Gender?')
 Nationality = Nationality.toUpperCase()
 Gender = Gender.toUpperCase()
